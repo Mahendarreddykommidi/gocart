@@ -1,5 +1,5 @@
 'use client'
-import { StarIcon } from 'lucide-react'
+import { StarIcon, StarsIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -21,7 +21,7 @@ const ProductCard = ({ product }) => {
                     <p>{product.name}</p>
                     <div className='flex'>
                         {Array(5).fill('').map((_, index) => (
-                            <StarIcon key={index} size={14} className='text-transparent mt-0.5' fill={rating >= index + 1 ? "#00C950" : "#D1D5DB"} />
+                            <StarsIcon key={index} size={14} className='text-transparent mt-0.5' fill={rating >= index + 1 ? "#00C950" : "#D1D5DB"} />
                         ))}
                     </div>
                 </div>
